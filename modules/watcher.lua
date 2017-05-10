@@ -20,7 +20,7 @@ appWatcher = hs.application.watcher.new(function(name, event, app)
             if not currentMethod then
                 bSwitch = 1
             else
-                bSwitch = hs.keycodes.setLayout("U.S.")
+                bSwitch = hs.keycodes.setLayout("ABC")
             end
         end
 
@@ -28,7 +28,7 @@ appWatcher = hs.application.watcher.new(function(name, event, app)
             hs.alert.closeAll()
             local method = hs.keycodes.currentMethod()
             if method == nil then
-                method = 'En_US'
+                method = 'ABC'
             end
             hs.alert.show(name .. ' - ' .. method)
         end
